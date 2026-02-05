@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adish S N | Full Stack Web Developer</title>
+  <meta name="description" content="Professional portfolio of Adish S N - Full Stack Web Developer" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #8952e9; 
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #ecfeff, #fdf4ff);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,.8);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
+    }
+
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+    }
+
+    nav .brand { font-weight: 700; letter-spacing: .4px; }
+
+    nav ul { list-style: none; display: flex; gap: 18px; }
+    nav ul a { color: var(--text); opacity: .9; }
+    nav ul a:hover { color: var(--accent); }
+
+    .container { max-width: 1100px; margin: auto; padding: 28px 18px; }
+
+   .hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+  justify-items: center;  
+  min-height: 100vh;      
+}
+
+
+    .card {
+      background: var(--card);
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(124,58,237,.1);
+      color: var(--accent);
+      border: 1px solid rgba(124,58,237,.3);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 12px;
+    }
+
+    h1 { font-size: clamp(28px, 4vw, 44px); margin-bottom: 10px; }
+    h2 { font-size: 26px; margin-bottom: 10px; }
+
+    .lead { color: var(--muted); margin-bottom: 16px; }
+
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+
+    .section { margin-top: 36px; }
+
+    .skill {
+      display: inline-flex;
+      background: #f1f5f9;
+      border: 1px solid #e5e7eb;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin: 6px 6px 0 0;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    .project h3 { font-size: 18px; }
+    .project p { color: var(--muted); font-size: 14px; }
+
+    footer {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 36px;
+      padding: 24px 18px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+   nav ul a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+nav ul a:hover {
+  background: rgba(124,58,237,.1);
+  color: var(--accent);
+}
+section {
+  scroll-margin-top: 90px;  
+}
+
+section.container {
+  display: none;
+}
+
+
+section.container:target {
+  display: block;
+  padding-top: 40px;
+  animation: premiumEnter 0.5s ease;
+}
+
+
+#home {
+  display: block;
+}
+
+
+section.container {
+  max-width: 900px;              
+  margin: 0 auto;
+}
+
+/
+section.container:target::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(137,82,233,0.06),
+    transparent 60%
+  );
+  z-index: -1;
+}
+
+
+@keyframes premiumEnter {
+  from {
+    opacity: 0;
+    transform: translateY(25px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">Adish S N</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<section id="home" class="container hero">
+  <div class="card" style="text-align:center;">
+    
+    <img src="./me.jpeg" alt="Adish S N"
+      style="width:160px;height:160px;object-fit:cover;border-radius:50%;border:3px solid var(--accent);margin-bottom:12px;" />
+
+    <span class="badge">Full Stack Web Developer</span>
+    <h1>Hi, I'm <span style="color: var(--accent)">Adish S N</span></h1>
+    <p class="lead">
+      I build responsive, user-friendly, and scalable web applications. I believe in continuous learning, consistent effort, and turning challenges into opportunities for growth.
+    </p>
+    <a class="btn" href="#projects">View Projects</a>
+  </div>
+</section>
+
+
+
+<section id="about" class="container section">
+  
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+     I am currently pursuing my Bachelor of Engineering in Computer Science and Engineering (B.E. CSE) at Coimbatore Institute of Engineering and Technology. I have a strong interest in full stack web development and enjoy building responsive, user-friendly web applications.
+
+I am passionate about learning new technologies, improving my problem-solving skills, and gaining hands-on experience through projects and internships. My goal is to grow as a software developer and contribute to meaningful, real-world solutions.
+    </p>
+    <p>
+      <strong>Achievement:</strong> Participated in <strong>Smart India Hackathon (SIH) 2025</strong>.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="container section">
+  <h2>Skills & Tech Stack</h2>
+  <div class="card">
+    <span class="skill">C</span>
+    <span class="skill">Java</span>
+    <span class="skill">Python</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+  </div>
+</section>
+
+
+<section id="projects" class="container section">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card project">
+      <h3>Portfolio Website</h3>
+      <p>
+        Personal professional portfolio built to showcase my skills, background, and projects in a clean and modern way.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <p><strong>Contact Information</strong></p>
+  <p><strong>Email:</strong> adish3979@gmail.com</p>
+  <p><strong>LinkedIn:</strong> linkedin.com/in/adish-s-n-135a05327</p>
+
+  <p style="margin-top:12px;">Adish S N — Built with ❤️ as a Full Stack Developer Portfolio.</p>
+  <p style="margin-top:8px; font-style:italic; color:var(--accent);">
+    "Small steps every day lead to big achievements. I’m focused on learning, building, and becoming better than yesterday." 🚀
+  </p>
+</footer>
+
+</body>
+</html>
